@@ -1566,9 +1566,9 @@ int GetNumBlocksOfPeers()
 
 bool IsInitialBlockDownload()
 {
-    //if (GetNumPeers() < 1
-    //    || chainActive.Tip()->nHeight < GetNumBlocksOfPeers())
-    //    return true;
+    if (GetNumPeers() < 1
+        || chainActive.Tip()->nHeight < GetNumBlocksOfPeers())
+        return true;
 
     // Once this function has returned false, it must remain false.
     static std::atomic<bool> latchToFalse{false};
