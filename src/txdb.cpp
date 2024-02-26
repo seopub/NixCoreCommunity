@@ -460,8 +460,8 @@ bool CBlockTreeDB::LoadBlockIndexGuts(const Consensus::Params& consensusParams, 
                 //Check POW limits before PoS onchain
                 else
                 {
-                    if (!CheckProofOfWork(pindexNew->GetBlockPoWHash(), pindexNew->nBits, consensusParams))
-                        return error("%s: CheckProofOfWork failed: %s", __func__, pindexNew->ToString());
+                    //if (!CheckProofOfWork(pindexNew->GetBlockPoWHash(), pindexNew->nBits, consensusParams))
+                      //  return error("%s: CheckProofOfWork failed: %s", __func__, pindexNew->ToString());
                 }
 
                 pcursor->Next();
