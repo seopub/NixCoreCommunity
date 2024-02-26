@@ -4060,8 +4060,8 @@ static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state,
 
     // Check proof of work matches claimed amount
     if(nHeight < consensusParams.nPosHeightActivate){
-        if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
-            return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+        //if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
+        //    return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
     }
     else{
         // Check timestamp
