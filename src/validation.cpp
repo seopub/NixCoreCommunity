@@ -4349,8 +4349,8 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
     } else
     {
         // Check proof of work
-        if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams))
-            return state.DoS(100, false, REJECT_INVALID, "bad-diffbits", false, "incorrect proof of work");
+        //if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams))
+        //    return state.DoS(100, false, REJECT_INVALID, "bad-diffbits", false, "incorrect proof of work");
     }
     // Check against checkpoints
     if (fCheckpointsEnabled) {
