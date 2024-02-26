@@ -230,8 +230,8 @@ public:
         //std::cout << consensus.hashGenesisBlock.ToString() << " " << genesis.hashMerkleRoot.ToString() << " " << NONCE;
         //assert(consensus.hashGenesisBlock == uint256S("0xdd28ad86def767c3cfc34267a950d871fc7462bc57ea4a929fc3596d9b598e41"));
         //assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
-		assert(consensus.hashGenesisBlock == uint256S("00000dae00a6df6bf03daaaf51b769ee8383b7ec156c3ddd8f5269d47773ae3e"));
-		assert(consensus.hashGenesisBlock == uint256S("06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
+		assert(consensus.hashGenesisBlock == uint256S("0x00000dae00a6df6bf03daaaf51b769ee8383b7ec156c3ddd8f5269d47773ae3e"));
+		assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
 
         vSeeds.emplace_back("74.48.129.163");
         vSeeds.emplace_back("74.48.196.40");
