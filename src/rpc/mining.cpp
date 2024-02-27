@@ -403,6 +403,16 @@ UniValue parseblock(const JSONRPCRequest& request)
 
     LOCK(cs_main);
 
+std::unique_ptr<CBlockTemplate> pblocktemplate(BlockAssembler(Params()).CreateNewBlock(coinbaseScript->reserveScript));
+if (!pblocktemplate.get()) throw JSONRPCError(RPC_INTERNAL_ERROR, "Couldn't create new block");
+CBlock *pblock = &pblocktemplate->block;
+std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
+ProcessNewBlock(Params(), shared_pblock, true, nullptr);
+
+UniValue result(UniValue::VOBJ);
+result.push_back(Pair("prase result", int(10)));	
+
+	
     std::string strMode = "template";
     UniValue lpval = NullUniValue;
     std::set<std::string> setClientRules;
