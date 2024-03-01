@@ -4716,7 +4716,15 @@ bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<cons
 
     {
         int nHeight = ZerocoinGetNHeight(pblock->GetBlockHeader());
-
+    
+        // Check 1 minute block spacing
+    	int64_t nPrevTime = chainActive.Tip()->nTime;	
+    	if(pblock->nTime - nPrevTime < 60)
+    	{
+    		LogPrintf("block created in less than 1 minute spacing, diff %d\n", nPrevTime - pblock->nTime);
+    		return error("%s: AcceptBlock FAILED block created in less than 1 minute spacing", __func__);
+    	}
+            
         CBlockIndex *pindex = nullptr;
         if (fNewBlock) *fNewBlock = false;
         CValidationState state;
