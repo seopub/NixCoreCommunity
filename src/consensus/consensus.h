@@ -17,8 +17,8 @@ static const unsigned int MAX_BLOCK_WEIGHT = 8000000;
 /** The maximum allowed number of signature check operations in a block (network rule) */
 static const int64_t MAX_BLOCK_SIGOPS_COST = 80000;
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 500;
-static const int COINBASE_MATURITY_V2 = 200;
+static const int COINBASE_MATURITY = 20;
+static const int COINBASE_MATURITY_V2 = 20;
 static const int COINBASE_MATURITY_TESTNET = 2;  //testnet
 /** Ghostnode block percent */
 static const double GHOSTNODE_REWARD = 0.28;
