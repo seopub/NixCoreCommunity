@@ -1472,8 +1472,8 @@ bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, int nHeight, con
     // Check the header only for PoW blocks
     if (!block.IsProofOfStake()){
         // Check the header
-        //if (!CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
-        //    return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+        if (!CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
+            return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
     }
 
     return true;
