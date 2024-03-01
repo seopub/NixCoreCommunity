@@ -182,8 +182,8 @@ public:
         consensus.nGhostnodeInitialize = 800; //~24 hours after mainnet release
 
         // POS params
-        consensus.nPosTimeActivation = 9936779552; //time of PoS activation
-        consensus.nPosHeightActivate = 999953000;
+        consensus.nPosTimeActivation = 1536779552; //time of PoS activation
+        consensus.nPosHeightActivate = 53000;
         nModifierInterval = 10 * 60;    // 10 minutes
         nTargetSpacing = 120;           // 2 minutes
         nTargetTimespan = 24 * 60;      // 24 mins
