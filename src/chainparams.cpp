@@ -215,8 +215,7 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        //pchMessageStart[0] = 0xb9;
-        pchMessageStart[0] = 0xa9;
+        pchMessageStart[0] = 0xb9;
         pchMessageStart[1] = 0xb4;
         pchMessageStart[2] = 0xbe;
         pchMessageStart[3] = 0xf9;
@@ -224,14 +223,11 @@ public:
         nBIP44ID = 0x8000002C;
         nPruneAfterHeight = 0;
 
-        //genesis = CreateGenesisBlock(1522615406, 1119233, 0x1e0ffff0, 1, 0 * COIN);
-        genesis = CreateGenesisBlock(1708943802, 79087, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1522615406, 1119233, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         //std::cout << consensus.hashGenesisBlock.ToString() << " " << genesis.hashMerkleRoot.ToString() << " " << NONCE;
-        //assert(consensus.hashGenesisBlock == uint256S("0xdd28ad86def767c3cfc34267a950d871fc7462bc57ea4a929fc3596d9b598e41"));
-        //assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
-		assert(consensus.hashGenesisBlock == uint256S("0x00000dae00a6df6bf03daaaf51b769ee8383b7ec156c3ddd8f5269d47773ae3e"));
-		assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
+        assert(consensus.hashGenesisBlock == uint256S("0xdd28ad86def767c3cfc34267a950d871fc7462bc57ea4a929fc3596d9b598e41"));
+        assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
 
         vSeeds.emplace_back("74.48.129.163");
         vSeeds.emplace_back("74.48.196.40");
