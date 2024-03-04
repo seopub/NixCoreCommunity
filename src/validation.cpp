@@ -4065,8 +4065,8 @@ static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state,
     }
     else{
         // Check timestamp
-        if (!block.hashPrevBlock.IsNull() && block.GetBlockTime() > (GetAdjustedTime() + 15))
-            return state.DoS(50, false, REJECT_INVALID, "block-timestamp", false, "block timestamp too far in the future");
+        //if (!block.hashPrevBlock.IsNull() && block.GetBlockTime() > (GetAdjustedTime() + 15))
+        //    return state.DoS(50, false, REJECT_INVALID, "block-timestamp", false, "block timestamp too far in the future");
     }
 
     return true;
