@@ -188,7 +188,7 @@ public:
         nTargetSpacing = 120;           // 2 minutes
         nTargetTimespan = 24 * 60;      // 24 mins
 
-        consensus.nCoinMaturityReductionHeight = 50;
+        consensus.nCoinMaturityReductionHeight = 97000;
         //Checkpoint to enable ghostfee distribution, fee powered DPoS, 200 conf staking
         consensus.nStartGhostFeeDistribution = 115921;
         consensus.nGhostFeeDistributionCycle = 720;
