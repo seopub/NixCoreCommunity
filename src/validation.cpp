@@ -2895,8 +2895,8 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
             blockReward = blockReward + returnFee;
         }
 
-        if (nStakeReward < 0 || nStakeReward > blockReward)
-            return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, blockReward), REJECT_INVALID, "bad-cs-amount");
+        //if (nStakeReward < 0 || nStakeReward > blockReward)
+        //    return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, blockReward), REJECT_INVALID, "bad-cs-amount");
 
 
         coinStakeCache.InsertCoinStake(blockHash, txCoinstake);
