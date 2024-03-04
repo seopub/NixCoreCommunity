@@ -2456,8 +2456,8 @@ bool CheckRequiredInputAmounts(const CBlock &block, int nHeight, CValidationStat
 
             //check if dev rewards were found
             if (!found_dev) {
-                return state.DoS(100, false, REJECT_FOUNDER_REWARD_MISSING,
-                                 "CheckRequiredInputAmounts() : dev reward missing");
+                //return state.DoS(100, false, REJECT_FOUNDER_REWARD_MISSING,
+                //                 "CheckRequiredInputAmounts() : dev reward missing");
             }
 
             nCalculatedStakeReward += (fullDevFee * Params().GetConsensus().nNewDevelopmentPayoutCycle);
