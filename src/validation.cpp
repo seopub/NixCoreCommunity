@@ -4522,9 +4522,9 @@ bool CChainState::AcceptBlockHeader(const CBlockHeader& block, CValidationState&
             pindex = miSelf->second;
             if (ppindex)
                 *ppindex = pindex;
-            if (pindex->nStatus & BLOCK_FAILED_MASK)
-                return state.Invalid(error("%s: block %s is marked invalid", __func__, hash.ToString()), 0, "duplicate");
-            return true;
+            //if (pindex->nStatus & BLOCK_FAILED_MASK)
+            //    return state.Invalid(error("%s: block %s is marked invalid", __func__, hash.ToString()), 0, "duplicate");
+            //return true;
         }
 
         if (!CheckBlockHeader(block, state, chainparams.GetConsensus()))
