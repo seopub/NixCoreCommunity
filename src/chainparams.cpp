@@ -229,8 +229,8 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0xdd28ad86def767c3cfc34267a950d871fc7462bc57ea4a929fc3596d9b598e41"));
         assert(genesis.hashMerkleRoot == uint256S("0x06c118557a3a44b144a31c9f3a967bd94f94e0d7ff666d30587360f695f0873d"));
 
-        vSeeds.emplace_back("74.48.129.163");
-        vSeeds.emplace_back("74.48.196.40");
+        //vSeeds.emplace_back("74.48.129.163");
+        //vSeeds.emplace_back("74.48.196.40");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,53);
