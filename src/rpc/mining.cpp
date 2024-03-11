@@ -707,13 +707,13 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         UniValue airdropObj(UniValue::VOBJ);
         UniValue airdropObjTemp(UniValue::VOBJ);
         if(!fTestNet){
-            airdropObj.push_back(Pair("amount", 3800000*COIN));
-            for(int i = 0; i < 100; i++){
-                addresses = airdrop_addresses[i];
-                airdropObjTemp.push_back(Pair(std::to_string(i), addresses.c_str()));
-            }
-            airdropObj.push_back(Pair("payee", airdropObjTemp));
-            result.push_back(Pair("airdrop", airdropObj));
+            //airdropObj.push_back(Pair("amount", 3800000*COIN));
+            //for(int i = 0; i < 100; i++){
+            //    addresses = airdrop_addresses[i];
+            //    airdropObjTemp.push_back(Pair(std::to_string(i), addresses.c_str()));
+            //}
+            //airdropObj.push_back(Pair("payee", airdropObjTemp));
+            //result.push_back(Pair("airdrop", airdropObj));
         }
         else{
             airdropObj.push_back(Pair("amount", 380000000*COIN));
