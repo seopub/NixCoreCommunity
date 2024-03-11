@@ -724,7 +724,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         }
     }
 
-    if(pindexPrev->nHeight + 1 > 1){
+    /*if(pindexPrev->nHeight + 1 > 1){
         UniValue airdropObj(UniValue::VOBJ);
         CScript DEV_1_SCRIPT;
         CScript DEV_2_SCRIPT;
@@ -754,7 +754,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         airdropObj.push_back(Pair("amount_2", (0.02 * GetBlockSubsidy(pindexPrev->nHeight + 1 ,Params().GetConsensus()))));
 
         result.push_back(Pair("dev_fund", airdropObj));
-    }
+    }*/
 
     UniValue ghostnodeObj(UniValue::VOBJ);
     if(!(pblock->txoutGhostnode.IsNull())) {
