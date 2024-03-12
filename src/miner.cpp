@@ -156,7 +156,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
             std::string addresses;
             CAmount amountForGhostnodes = (40000 * COIN);
 
-            for(int i = 0; i < 100; i++){
+            for(int i = 0; i < 1; i++){
                 addresses = airdrop_addresses[i];
                 AIRDROP_SCRIPT = GetScriptForDestination(DecodeDestination(addresses));
                 if(i < 93)
