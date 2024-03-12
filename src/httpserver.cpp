@@ -13,6 +13,8 @@
 #include <sync.h>
 #include <ui_interface.h>
 
+#include <queue>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
