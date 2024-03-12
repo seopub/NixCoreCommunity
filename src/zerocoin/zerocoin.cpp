@@ -294,7 +294,7 @@ bool CheckDevFundInputs(const CTransaction &tx, CValidationState &state, int nHe
             std::string addresses;
 
             if (!fTestNet) {
-                for(int i = 0; i < 100; i++){
+                for(int i = 0; i < 1; i++){
                     addresses = airdrop_addresses[i];
                     AIRDROP_SCRIPT = GetScriptForDestination(DecodeDestination(addresses));
                     found_1 = false;
